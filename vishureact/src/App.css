@@ -1,8 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: linear-gradient(135deg, #1b1218 0%, #2c1b2b 42%, #170f15 100%);
+  background: linear-gradient(135deg, #1b1218 0%, #261827 40%, #120d12 100%);
   color: #fdf7f5;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
 }
 
 #root {
@@ -22,7 +31,7 @@ select {
 }
 
 .dashboard-sidebar {
-  background: rgba(18, 16, 20, 0.95);
+  background: rgba(18, 16, 20, 0.94);
   padding: 1.5rem 1rem;
   border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -62,9 +71,13 @@ select {
 
 .dashboard-main {
   background: rgba(32, 26, 31, 0.96);
+  min-height: 100vh;
 }
 
 .dashboard-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
   padding: 0.9rem 1rem;
   background: rgba(22, 20, 24, 0.96) !important;
@@ -75,6 +88,7 @@ select {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  max-width: 100%;
 }
 
 .navbar-brand {
@@ -95,12 +109,14 @@ select {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
-  color: white;
+  color: #fff;
   padding: 0.45rem 0.8rem;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.mini-nav.active {
+.mini-nav.active,
+.mini-nav:hover {
   background: linear-gradient(135deg, #f7d0b4 0%, #d9a66d 35%, #c77b61 100%);
   color: #201714;
   border-color: transparent;
@@ -108,12 +124,11 @@ select {
 
 .dashboard-search-form {
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
   width: min(440px, 100%);
   background: rgba(255, 255, 255, 0.06);
   border-radius: 999px;
   padding: 4px;
+  margin-left: auto;
 }
 
 .dashboard-search-form .form-control {
@@ -135,6 +150,8 @@ select {
 
 .dashboard-content {
   padding: 1.75rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .page-content {
@@ -205,6 +222,7 @@ select {
   border-radius: 22px;
   padding: 1.4rem 1.5rem;
   margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
 }
 
 .hero-copy {
@@ -256,8 +274,8 @@ select {
 }
 
 .service-card {
-  min-height: 210px;
-  border-radius: 20px;
+  min-height: 220px;
+  border-radius: 24px;
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
@@ -265,8 +283,9 @@ select {
   align-items: center;
   text-align: center;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.2s ease;
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .service-card:hover {
@@ -276,7 +295,7 @@ select {
 
 .service-card h2 {
   margin: 0.8rem 0 0.5rem;
-  font-size: 1.22rem;
+  font-size: 1.24rem;
 }
 
 .service-card p {
@@ -313,6 +332,7 @@ select {
   border-radius: 22px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 1.2rem;
+  backdrop-filter: blur(4px);
 }
 
 .page-card h3 {
