@@ -20,41 +20,113 @@ const highlights = [
 const reservationOptions = ['Haircut', 'Hair Spa', 'Facial', 'Coloring', 'Bridal Makeover']
 
 const styleGallery = [
-  { name: 'Classic Bob', tag: 'Elegant' },
-  { name: 'Soft Blowout', tag: 'Volume' },
-  { name: 'Layer Cut', tag: 'Modern' },
-  { name: 'Curls', tag: 'Texture' },
-  { name: 'Pixie Look', tag: 'Bold' },
-  { name: 'Long Waves', tag: 'Romantic' },
+  {
+    name: 'Classic Bob',
+    tag: 'Elegant',
+    image: 'https://images.unsplash.com/photo-1521590832167-7b7d9ac061a1?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Soft Blowout',
+    tag: 'Volume',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Layer Cut',
+    tag: 'Modern',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Curls',
+    tag: 'Texture',
+    image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Pixie Look',
+    tag: 'Bold',
+    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Long Waves',
+    tag: 'Romantic',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+  },
 ]
 
 const retroSongs = [
-  { title: 'Aankhon Ki Gustakhiyan', artist: 'Mohammed Rafi' },
-  { title: 'Pyar Hua Iqraar Hua', artist: 'Kishore Kumar' },
-  { title: 'Lag Jaa Gale', artist: 'Lata Mangeshkar' },
-  { title: 'Mera Joota Hai Japani', artist: 'Mukesh' },
-  { title: 'Waqt Se Waqt Tak', artist: 'Mohammed Rafi' },
+  { title: 'Aankhon Ki Gustakhiyan', artist: 'Mohammed Rafi', accent: '#f6b4a2' },
+  { title: 'Pyar Hua Iqraar Hua', artist: 'Kishore Kumar', accent: '#a9d6e5' },
+  { title: 'Lag Jaa Gale', artist: 'Lata Mangeshkar', accent: '#d4b5ff' },
+  { title: 'Mera Joota Hai Japani', artist: 'Mukesh', accent: '#ffd6a5' },
+  { title: 'Waqt Se Waqt Tak', artist: 'Mohammed Rafi', accent: '#b7e4c7' },
 ]
 
 const salonStaff = [
-  { name: 'Anita', role: 'Senior Stylist' },
-  { name: 'Riya', role: 'Skin Specialist' },
-  { name: 'Vikas', role: 'Hair Care Expert' },
-  { name: 'Neha', role: 'Bridal Artist' },
+  {
+    name: 'Anita',
+    role: 'Senior Stylist',
+    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Riya',
+    role: 'Skin Specialist',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Vikas',
+    role: 'Hair Care Expert',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Neha',
+    role: 'Bridal Artist',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+  },
 ]
 
 const skincareItems = [
-  { name: 'Glow Facial', price: '$45' },
-  { name: 'Hydration Mask', price: '$30' },
-  { name: 'Vitamin C Boost', price: '$38' },
-  { name: 'Deep Cleanse', price: '$35' },
+  {
+    name: 'Glow Facial',
+    price: '$45',
+    image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Hydration Mask',
+    price: '$30',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Vitamin C Boost',
+    price: '$38',
+    image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Deep Cleanse',
+    price: '$35',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80',
+  },
 ]
 
 const haircareItems = [
-  { name: 'Keratin Repair', price: '$55' },
-  { name: 'Scalp Renewal', price: '$40' },
-  { name: 'Silk Smooth Serum', price: '$32' },
-  { name: 'Bond Repair Care', price: '$48' },
+  {
+    name: 'Keratin Repair',
+    price: '$55',
+    image: 'https://images.unsplash.com/photo-1521590832167-7b7d9ac061a1?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Scalp Renewal',
+    price: '$40',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Silk Smooth Serum',
+    price: '$32',
+    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    name: 'Bond Repair Care',
+    price: '$48',
+    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80',
+  },
 ]
 
 function App() {
@@ -153,6 +225,18 @@ function ReservationPage() {
         <h2>Book your salon appointment</h2>
       </div>
 
+      <div className="visual-hero reservation-hero">
+        <div className="hero-copy-box">
+          <span className="mini-tag">Premium care</span>
+          <h3>Reserve a fresh look for your next visit</h3>
+          <p>Hair styling, beauty rituals, skin care, and bridal treatments tailored to your schedule.</p>
+        </div>
+        <div className="floating-card">
+          <strong>Today</strong>
+          <span>4:30 PM - Bridal glow</span>
+        </div>
+      </div>
+
       <div className="page-grid two-col">
         <div className="page-card big-card">
           <h3>Choose your service</h3>
@@ -192,10 +276,17 @@ function StylePage() {
         <h2>Trending salon looks</h2>
       </div>
 
+      <div className="visual-hero gallery-hero">
+        <div className="hero-copy-box">
+          <span className="mini-tag">Trending looks</span>
+          <h3>Explore hair inspiration for every mood</h3>
+        </div>
+      </div>
+
       <div className="gallery-grid">
         {styleGallery.map((style) => (
           <div key={style.name} className="gallery-card">
-            <div className="gallery-image placeholder-style">💇‍♀️</div>
+            <div className="gallery-image" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${style.image})` }} />
             <div className="gallery-text">
               <strong>{style.name}</strong>
               <span>{style.tag}</span>
@@ -215,10 +306,20 @@ function MusicPage() {
         <h2>Playlist for a relaxing salon mood</h2>
       </div>
 
+      <div className="visual-hero music-hero">
+        <div className="record-visual">
+          <div className="record-disc" />
+        </div>
+        <div className="hero-copy-box">
+          <span className="mini-tag">Classic stereo</span>
+          <h3>Retro beats for a warm, welcoming salon ambience</h3>
+        </div>
+      </div>
+
       <div className="list-panel">
         {retroSongs.map((song, index) => (
           <div key={song.title} className="list-row">
-            <span className="song-index">0{index + 1}</span>
+            <span className="song-index" style={{ color: song.accent }}>0{index + 1}</span>
             <div>
               <strong>{song.title}</strong>
               <small>{song.artist}</small>
@@ -239,10 +340,17 @@ function StaffPage() {
         <h2>Meet our expert team</h2>
       </div>
 
+      <div className="visual-hero staff-hero">
+        <div className="hero-copy-box">
+          <span className="mini-tag">Our specialists</span>
+          <h3>Friendly experts behind every transformation</h3>
+        </div>
+      </div>
+
       <div className="staff-grid">
         {salonStaff.map((member) => (
           <div key={member.name} className="staff-card">
-            <div className="staff-avatar">👩‍💼</div>
+            <div className="staff-avatar" style={{ backgroundImage: `url(${member.image})` }} />
             <h3>{member.name}</h3>
             <p>{member.role}</p>
           </div>
@@ -260,11 +368,19 @@ function SkincarePage() {
         <h2>Glow-enhancing care solutions</h2>
       </div>
 
+      <div className="visual-hero skincare-hero">
+        <div className="hero-copy-box">
+          <span className="mini-tag">Natural glow</span>
+          <h3>Calm, healthy, and radiant skin starts here</h3>
+        </div>
+        <div className="orb-visual" />
+      </div>
+
       <div className="service-list">
         {skincareItems.map((item) => (
           <div key={item.name} className="info-card">
-            <div className="info-icon">🌿</div>
-            <div>
+            <div className="info-image" style={{ backgroundImage: `url(${item.image})` }} />
+            <div className="info-copy">
               <h3>{item.name}</h3>
               <p>Gentle care for refreshed and radiant skin.</p>
             </div>
@@ -284,11 +400,19 @@ function HaircarePage() {
         <h2>Healthy strands, luminous shine</h2>
       </div>
 
+      <div className="visual-hero haircare-hero">
+        <div className="hero-copy-box">
+          <span className="mini-tag">Healthy hair</span>
+          <h3>Restore shine, softness, and strength in every strand</h3>
+        </div>
+        <div className="sparkle-visual" />
+      </div>
+
       <div className="service-list">
         {haircareItems.map((item) => (
           <div key={item.name} className="info-card">
-            <div className="info-icon">✨</div>
-            <div>
+            <div className="info-image" style={{ backgroundImage: `url(${item.image})` }} />
+            <div className="info-copy">
               <h3>{item.name}</h3>
               <p>Repair and protect your hair with rich nourishment.</p>
             </div>

@@ -318,6 +318,93 @@ select {
   margin-bottom: 0.5rem;
 }
 
+.visual-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 1rem;
+  align-items: center;
+  min-height: 220px;
+  padding: 1.4rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  animation: glow 8s ease-in-out infinite alternate;
+}
+
+.reservation-hero {
+  background: linear-gradient(135deg, rgba(112, 83, 255, 0.8), rgba(243, 120, 164, 0.75)), url('https://images.unsplash.com/photo-1521590832167-7b7d9ac061a1?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.gallery-hero {
+  background: linear-gradient(135deg, rgba(163, 114, 255, 0.8), rgba(255, 150, 214, 0.7)), url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.music-hero {
+  background: linear-gradient(135deg, rgba(10, 132, 172, 0.75), rgba(117, 220, 214, 0.68)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.staff-hero {
+  background: linear-gradient(135deg, rgba(255, 180, 99, 0.75), rgba(194, 120, 93, 0.7)), url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.skincare-hero {
+  background: linear-gradient(135deg, rgba(92, 200, 137, 0.8), rgba(45, 118, 88, 0.72)), url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.haircare-hero {
+  background: linear-gradient(135deg, rgba(176, 104, 199, 0.8), rgba(117, 63, 160, 0.7)), url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.hero-copy-box {
+  position: relative;
+  z-index: 1;
+}
+
+.mini-tag {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+
+.hero-copy-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.4rem, 2vw, 2.2rem);
+  max-width: 420px;
+}
+
+.hero-copy-box p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.floating-card {
+  position: relative;
+  z-index: 1;
+  justify-self: end;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 160px;
+}
+
+.floating-card strong {
+  font-size: 1.1rem;
+}
+
 .page-grid {
   display: grid;
   gap: 1rem;
@@ -380,16 +467,24 @@ select {
 .staff-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.gallery-card:hover,
+.staff-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.18);
 }
 
 .gallery-image {
-  height: 180px;
+  height: 200px;
   display: grid;
   place-items: center;
   font-size: 3rem;
-  background: linear-gradient(135deg, #d7a6b5, #9f7ae3);
+  background-size: cover;
+  background-position: center;
 }
 
 .gallery-text {
@@ -406,11 +501,10 @@ select {
 }
 
 .staff-avatar {
-  height: 120px;
-  display: grid;
-  place-items: center;
-  font-size: 2.5rem;
-  background: linear-gradient(135deg, #f2c7d9, #b79ddd);
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .staff-card h3,
@@ -453,7 +547,6 @@ select {
 }
 
 .song-index {
-  color: #ffd7b9;
   font-weight: 700;
   width: 32px;
 }
@@ -462,19 +555,94 @@ small {
   color: #f3d0d7;
 }
 
-.info-icon {
-  font-size: 2rem;
-  width: 58px;
-  height: 58px;
-  display: grid;
-  place-items: center;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.08);
+.info-image {
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
+}
+
+.info-copy {
+  flex: 1;
 }
 
 .info-card strong {
   color: #ffd7b9;
   font-size: 1.2rem;
+}
+
+.record-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.record-disc {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f4f4f4 0 14%, #191919 15% 26%, #272727 27% 38%, #121212 39% 47%, #2a2a2a 48% 100%);
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.12), 0 0 30px rgba(0, 0, 0, 0.18);
+  animation: spin 6s linear infinite;
+}
+
+.orb-visual {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff6c4 0%, #b9f3d0 25%, #a1d8ff 60%, #7dd3a6 100%);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.35);
+  animation: pulse 3s ease-in-out infinite;
+  justify-self: end;
+}
+
+.sparkle-visual {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+  position: relative;
+  justify-self: end;
+  box-shadow: 0 0 0 10px rgba(255,255,255,0.08);
+}
+
+.sparkle-visual::before,
+.sparkle-visual::after {
+  content: '✦';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  color: rgba(255,255,255,0.9);
+  animation: twinkle 2.5s ease-in-out infinite;
+}
+
+.sparkle-visual::after {
+  transform: scale(0.7);
+  animation-delay: 0.7s;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes glow {
+  from { box-shadow: inset 0 0 0 rgba(255,255,255,0.04); }
+  to { box-shadow: inset 0 0 24px rgba(255,255,255,0.1); }
 }
 
 .reservation {
