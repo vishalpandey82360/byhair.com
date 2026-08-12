@@ -33,6 +33,9 @@ export default function Navbar({ onSelectPage, activePage }) {
             Search
           </button>
         </form>
+        <div className="navbar-user text-light ms-3">
+          vishal
+        </div>
       </div>
     </nav>
   )
